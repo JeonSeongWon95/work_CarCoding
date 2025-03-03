@@ -9019,7 +9019,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: fdd6e9a14cd05b348b1c06f907dc6a92, type: 3}
   - {fileID: 8300000, guid: bc1f978f25b3fde4ead262e6dc8a0385, type: 3}
-  - {fileID: 8300000, guid: bc1f978f25b3fde4ead262e6dc8a0385, type: 3}
+  - {fileID: 8300000, guid: 3f6d4783225f7ca4091408bbeaba69ba, type: 3}
 --- !u!4 &2035066361
 Transform:
   m_ObjectHideFlags: 0

@@ -589,7 +589,7 @@ public class CarCodingFlowController : MonoBehaviour
                 carImpactImage.color = darkerColor;
                 bRestartTimerEnable = true;
 
-                AudioManager.instance.PlayAudio(AudioClipType.ResultFail);
+                AudioManager.instance.PlayAudio(AudioClipType.PopUpSound);
 
                 yield break;
             }
@@ -672,6 +672,7 @@ public class CarCodingFlowController : MonoBehaviour
         else if (currentCoding2Index == 1 || currentCoding2Index == 2)
             yield return new WaitForSeconds(4.0f);
 
+        AudioManager.instance.PlayAudio(AudioClipType.PopUpSound);
         MapBGFailObject.SetActive(true);
         yield return new WaitForSeconds(5.0f);
 
@@ -731,12 +732,11 @@ public class CarCodingFlowController : MonoBehaviour
         if (isCorrect)
         {
             currentCoding2Index++;
-            AudioManager.instance.PlayAudio(AudioClipType.ResultSucceed);
+            AudioManager.instance.PlayAudio(AudioClipType.SuccedSound);
             StartCoroutine(CoOrderStart(waitTime));
         }
         else
-        {
-            AudioManager.instance.PlayAudio(AudioClipType.ResultFail);
+        {      
             Coding2Waiting(false);
         }
 
@@ -816,7 +816,7 @@ public class CarCodingFlowController : MonoBehaviour
 
     void ResultFail()
     {
-        AudioManager.instance.PlayAudio(AudioClipType.ResultFail);
+        AudioManager.instance.PlayAudio(AudioClipType.PopUpSound);
 
         MapBGImage.texture = MapBGEndTexture;
         MapBGFailObject.SetActive(true);
@@ -828,7 +828,7 @@ public class CarCodingFlowController : MonoBehaviour
 
     void ResultSucceed(HUDState type) 
     {
-        AudioManager.instance.PlayAudio(AudioClipType.ResultSucceed);
+        AudioManager.instance.PlayAudio(AudioClipType.PopUpSound);
 
         if (type == HUDState.Coding)
         {

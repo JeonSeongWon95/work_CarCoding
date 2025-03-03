@@ -6,8 +6,8 @@ using UnityEngine.Audio;
 public enum AudioClipType
 {
     Click, 
-    ResultFail, //실패 결과 출력 시 효과음
-    ResultSucceed //성공 결과 출력 시 효과음
+    PopUpSound, //팝업 뜰때 나는 효과음
+    SuccedSound //코딩 2에서 성공하면 나는 효과음
 }
 
 public class AudioManager : MonoBehaviour
